@@ -1,10 +1,17 @@
 # Datasets
 ./data/
 !./data/.gitkeep
+./data/mnist_png/testing/*
+./data/mnist.tar.gz
+
 
 # Output
 out*
 !./out/.gitkeep
+
+
+## avoid pics
+*.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
