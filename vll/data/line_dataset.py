@@ -2,7 +2,7 @@ import random
 import numpy as np
 import math
 
-from skimage.draw import line, line_aa, circle, set_color, circle_perimeter_aa
+from skimage.draw import line, line_aa, disk, set_color, circle_perimeter_aa
 from skimage.io import imsave
 from skimage.util import random_noise
 
@@ -141,7 +141,7 @@ class LineDataset:
 					
 				r = int(points[i, 0, j] * self.imgH)
 				c = int(points[i, 1, j] * self.imgW)
-				rr, cc = circle(r, c, 2)
+				rr, cc = disk((r,c),2)#circle(r, c, 2)
 				set_color(data[i], (rr, cc), clr)
 
 		return data

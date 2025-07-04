@@ -59,8 +59,12 @@ def __train(dataset, loss, dsac, point_nn, direct_nn, params):
 	val_images, val_labels = dataset.samples(params['valsize'])
 	val_inputs, val_labels = prepare_data(val_images, val_labels, params['use_gpu'])
 
+	# print number of iterations for debugging:
+	# edit: from neel
+	print(f"number of iterations: {params['trainiterations']+1}")
 	# start training
-	for iteration in range(0, params['trainiterations']+1):
+	# edit from neel: for the time being, I replaced: range(0, params['trainiterations']+1) with only 11 iterations:
+	for iteration in range(0, 101):
 		start_time = time.time()
 
 		# generate training data

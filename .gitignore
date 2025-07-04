@@ -5,6 +5,9 @@
 ./data/mnist.tar.gz
 
 
+#
+
+
 # Output
 out*
 !./out/.gitkeep
